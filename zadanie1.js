@@ -1,1 +1,3 @@
-const sayHi = (word = 'Hello') => `${word} World!`;
+var a = "Hello";
+var b = "World";
+console.log(`${a} ${b}`);   
