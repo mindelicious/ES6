@@ -1,8 +1,9 @@
-
 class Stopwatch extends React.Component {
-    constructor() {
+    constructor(props) {
+        super(props);
+
         this.running = false;
-        this.display = display;
+        this.display = props.display;
         this.reset();
         this.print(this.times);
     }
@@ -60,12 +61,11 @@ function pad0(value) {
     return result;
 }
 
-const stopwatch = new Stopwatch(
-document.querySelector('.stopwatch'));
+const stopwatch = new Stopwatch({
+    display: document.querySelector('.stopwatch')
+});
 
 var startButton = document.getElementById('start');
 startButton.addEventListener('click', () => stopwatch.start());
 var stopButton = document.getElementById('stop');
 stopButton.addEventListener('click', () => stopwatch.stop());
-/*var resetButton = document.getElementById('reset');
-resetButton.addEventListener('click', () => stopwatch.reset());*/
