@@ -12,7 +12,7 @@ class App extends React.Component {
     }
 
     onSubmit(event) {
-        event.PreventDeafault();
+        event.preventDefault();
         const {searchText} = this.state;
         const url = `https://api.github.com/search/users?q=${searchText}`;
         fetch(url)
