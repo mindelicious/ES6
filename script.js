@@ -1,3 +1,6 @@
+import React from 'React';
+import './script';
+
 class App extends React.Component {
     constructor() {
         super();
@@ -62,6 +65,6 @@ class User extends React.Component {
 }
 
 ReactDOM.render(
-    <App />,
+    <App className={style.script} />,
     document.getElementById('root')
 );
